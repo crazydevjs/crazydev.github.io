@@ -4,95 +4,123 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>crazydev - Deepak Deodatt Mishra</title>
+    <title>Deepak Mishra — Frontend Developer</title>
+    <meta name="description" content="Frontend Developer & App Developer based in India. Building responsive web and mobile applications." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/151f89ea00.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/151f89ea00.js" crossorigin="anonymous"></script>
   </head>
   <body>
+
+    <nav id="navbar">
+      <ul id="sidemenu">
+        <i class="fas fa-times close-menu" onclick="closemenu()"></i>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <i class="fas fa-bars nav-toggle" onclick="openmenu()"></i>
+    </nav>
+
     <div id="header">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
       <div class="container">
-        <nav>
-          <img
-            src="./images/Black & White Minimalist Business Logo (2) (1).png"
-            class="logo"
-            alt=""
-          />
-          <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fas fa-times" onclick="closemenu()"></i>
-          </ul>
-          <i class="fas fa-bars" onclick="openmenu()"></i>
-        </nav>
         <div class="header-text">
-          <p>Frontend Developer</p>
-          <h1>Hi, I'm <span>Deepak</span><br />Deodatt Mishra From India</h1>
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            Available for freelance work
+          </div>
+          <h1>Hi, I'm <span class="name">Deepak</span><br />Deodatt Mishra</h1>
+          <p class="hero-sub">
+            Frontend Developer &amp; App Developer from India. I craft responsive,
+            interactive web and mobile applications with clean code and great UX.
+          </p>
+          <div class="hero-cta">
+            <a href="#portfolio" class="btn-primary">
+              <i class="fas fa-briefcase"></i> View My Work
+            </a>
+            <a href="#contact" class="btn-outline">
+              <i class="fas fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
         </div>
       </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </div>
-    <!-- -------------about--------------- -->
+
     <div id="about">
       <div class="container">
-        <div class="row">
-          <div class="about-col-1">
+        <div class="about-grid">
+          <div class="about-image-wrapper">
             <img
               src="./images/Screenshot_2023-06-14-09-54-01-48_1c337646f29875672b5a61192b9010f9-removebg-preview.png"
-              alt=""
+              alt="Deepak Mishra"
             />
           </div>
-          <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
+          <div class="about-content">
+            <div class="section-tag">About Me</div>
+            <h1 class="sub-title">Know Who I Am</h1>
             <p>
-              Hi, I’m Deepak Mishra, a frontend developer and app developer with
-              expertise in creating responsive and interactive web and mobile
-              applications. I’m a B.Tech student at AKTU and I have a portfolio
-              of projects that demonstrate my skills in HTML, CSS, JavaScript,
-              React, Flutter and more. I’m always keen to learn new technologies
-              and frameworks and use them to solve real-world problems. I’m a
-              creative and enthusiastic developer who is looking for new
-              opportunities and challenges.
+              Hi, I'm Deepak Mishra — a passionate frontend developer and app developer
+              with expertise in building responsive and interactive web and mobile
+              applications. Currently pursuing B.Tech at AKTU, I have hands-on
+              experience with HTML, CSS, JavaScript, React, Flutter, and more. I'm
+              always looking to learn new technologies and take on exciting challenges.
             </p>
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
-                Skills
-              </p>
-              <p class="tab-links" onclick="opentab('experience')">
-                Experience
-              </p>
-              <p class="tab-links" onclick="opentab('qualification')">Qualification</p>
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('qualification')">Education</p>
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>UI/UX</span><br />Designing Web/App interfaces</li>
-                <li><span>Web Development</span><br />Web app Development</li>
-                <li><span>App Development</span><br />Flutter/ React Native</li>
+                <li>
+                  <span>UI/UX Design</span>
+                  Designing beautiful web &amp; app interfaces
+                </li>
+                <li>
+                  <span>Web Development</span>
+                  HTML, CSS, JavaScript, React.js
+                </li>
+                <li>
+                  <span>App Development</span>
+                  Flutter &amp; React Native
+                </li>
               </ul>
             </div>
             <div class="tab-contents" id="experience">
               <ul>
                 <li>
-                  <span>2020 - 2021</span><br />Frontend Developer at Team
-                  Shuruaat
+                  <span>2020 – 2021</span>
+                  Frontend Developer at Team Shuruaat
                 </li>
               </ul>
             </div>
             <div class="tab-contents" id="qualification">
               <ul>
-                <li><span>2020 - Current</span><br />B.TECH from AKTU</li>
                 <li>
-                  <span>IOT Workshop at IIT BHU</span><br/><a href="/images/1636803700214.jpeg" download target="_blank">Download Certificate</a>
+                  <span>2020 – Present</span>
+                  B.Tech from AKTU
                 </li>
                 <li>
-                  <span>Dart Programming</span><br/><a href="/images/1622003128042.jpeg" download target="_blank">Download Certificate</a>
+                  <span>IOT Workshop — IIT BHU</span>
+                  <a href="/images/1636803700214.jpeg" download target="_blank">Download Certificate</a>
                 </li>
                 <li>
-                  <span>Python Programming</span><br/><a href="/images/1631298942127.pdf" download target="_blank">Download Certificate</a>
+                  <span>Dart Programming</span>
+                  <a href="/images/1622003128042.jpeg" download target="_blank">Download Certificate</a>
+                </li>
+                <li>
+                  <span>Python Programming</span>
+                  <a href="/images/1631298942127.pdf" download target="_blank">Download Certificate</a>
                 </li>
               </ul>
             </div>
@@ -100,156 +128,174 @@
         </div>
       </div>
     </div>
-    <!-----------------services----------------->
+
     <div id="services">
       <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-          <div>
-            <i class="fas fa-crop-alt"></i>
+        <div class="section-header">
+          <div class="section-tag">What I Do</div>
+          <h1 class="sub-title">My Services</h1>
+          <div class="section-line"></div>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-crop-alt"></i></div>
             <h2>Web Design</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-              fuga impedit quos. Harum corporis officiis eligendi placeat et
-              architecto exercitationem.
+              Crafting beautiful, intuitive interfaces with clean aesthetics and
+              exceptional user experience across all devices and screen sizes.
             </p>
-            <a href="#">Learn more</a>
           </div>
-          <div>
-            <i class="fa-solid fa-code"></i>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-code"></i></div>
             <h2>Web Development</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-              fuga impedit quos. Harum corporis officiis eligendi placeat et
-              architecto exercitationem.
+              Building fast, responsive, and scalable web applications using
+              modern technologies like React, JavaScript, HTML5 and CSS3.
             </p>
-            <a href="#">Learn more</a>
           </div>
-          <div>
-            <i class="fab fa-app-store"></i>
+          <div class="service-card">
+            <div class="service-icon"><i class="fab fa-app-store"></i></div>
             <h2>App Development</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-              fuga impedit quos. Harum corporis officiis eligendi placeat et
-              architecto exercitationem.
+              Developing cross-platform mobile applications with Flutter and
+              React Native delivering native-like performance and smooth UX.
             </p>
-            <a href="#">Learn more</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- -----------portfolio------------->
+
     <div id="portfolio">
       <div class="container">
-        <h1 class="sub-title">My Work</h1>
+        <div class="section-header">
+          <div class="section-tag">My Portfolio</div>
+          <h1 class="sub-title">Recent Work</h1>
+          <div class="section-line"></div>
+        </div>
         <div class="work-list">
           <div class="work">
-            <img src="./images/work-1.png" alt="" />
+            <img src="./images/job-portal.jpg" alt="Job Portal" />
             <div class="layer">
-              <h3>Soical Media App</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptates cumque
-              </p>
-              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+              <h3>Job Portal</h3>
+              <p>A modern hiring platform connecting top employers with skilled candidates through smart filtering and real-time listings</p>
+              <a href="https://job-portal-mern-one-woad.vercel.app/#/login" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <div class="work">
-            <img src="./images/work-2.png" alt="" />
+            <img src="./images/penperect.jpg" alt="PenPerFect" />
             <div class="layer">
-              <h3>Music App</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptates cumque
-              </p>
-              <a href="#"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="./images/work-3.png" alt="" />
-            <div class="layer">
-              <h3>Online Shopping App</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptates cumque
-              </p>
-              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+              <h3>PenPerFect</h3>
+              <p>A distraction-free writing and content management app built for bloggers, writers, and creative minds</p>
+              <a href="https://markdown-notes-app-livid.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a href="#" class="btn">View All Projects</a>
       </div>
     </div>
-    <!--------------contact-------------->
+
     <div id="contact">
       <div class="container">
-        <div class="row">
+        <div class="section-header">
+          <div class="section-tag">Get In Touch</div>
+          <h1 class="sub-title">Contact Me</h1>
+          <div class="section-line"></div>
+        </div>
+        <div class="contact-grid">
           <div class="contact-left">
-            <h1 class="sub-title">Contact Me</h1>
-            <p>
-              <i class="fas fa-paper-plane"></i
-              ><a href="mailto: dt1702281@gmail.com">dt1702281@gmail.com</a>
+            <p class="contact-desc">
+              Have a project in mind or want to collaborate? Feel free to reach out —
+              I'm always open to discussing new opportunities and creative ideas.
             </p>
-            <p>
-              <i class="fas fa-phone-square-alt"></i
-              ><a href="tel:+918542000686">854 2000 686</a>
-            </p>
-            <div class="social-icons">
-              <a href=""><i class="fab fa-facebook"></i></a>
-              <a href=""><i class="fab fa-twitter-square"></i></a>
-              <a href=""><i class="fab fa-instagram"></i></a>
-              <a href=""><i class="fab fa-linkedin"></i></a>
-              <a href=""><i class="fab fa-github"></i></a>
+            <div class="contact-info-item">
+              <div class="icon-box"><i class="fas fa-envelope"></i></div>
+              <a href="mailto:dt1702281@gmail.com">dt1702281@gmail.com</a>
             </div>
-            <a href="" download class="btn btn2">Download CV</a>
+            <div class="contact-info-item">
+              <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+              <a href="tel:+918542000686">+91 854 2000 686</a>
+            </div>
+            <div class="social-icons">
+              <a href="" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="" title="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <a href="" download class="btn btn2">
+              <i class="fas fa-download"></i> Download CV
+            </a>
           </div>
           <div class="contact-right">
             <form>
-              <input type="text" name="Name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-              />
-              <textarea
-                name="Message"
-                rows="6"
-                placeholder="Your Message"
-              ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="Name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="hello@example.com" required />
+              </div>
+              <div class="form-group">
+                <label>Message</label>
+                <textarea name="Message" rows="5" placeholder="Tell me about your project..."></textarea>
+              </div>
+              <button type="submit" class="btn btn2">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
             </form>
           </div>
         </div>
       </div>
-      <div class="copyright">
-        <p>Copyright &copy; Made by Deepak Deodatt Mishra</p>
+      <div class="footer">
+        <p>Copyright &copy; 2024 <span>Deepak Deodatt Mishra</span>. All rights reserved.</p>
+        <p>Made with <span>&#9829;</span> in India</p>
       </div>
     </div>
+
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
 
       function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove("active-tab");
-        }
+        for (var i = 0; i < tablinks.length; i++) tablinks[i].classList.remove("active-link");
+        for (var i = 0; i < tabcontents.length; i++) tabcontents[i].classList.remove("active-tab");
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
       }
-    </script>
-    <script>
+
       var sidemenu = document.getElementById("sidemenu");
 
-      function openmenu() {
-        sidemenu.style.right = "0";
-      }
-      function closemenu() {
-        sidemenu.style.right = "-200px";
-      }
+      function openmenu() { sidemenu.classList.add("open"); }
+      function closemenu() { sidemenu.classList.remove("open"); }
+
+      sidemenu.querySelectorAll("li a").forEach(function (link) {
+        link.addEventListener("click", closemenu);
+      });
+
+      window.addEventListener("scroll", function () {
+        var nav = document.getElementById("navbar");
+        if (window.scrollY > 50) nav.classList.add("scrolled");
+        else nav.classList.remove("scrolled");
+      });
+
+      var sections = document.querySelectorAll("div[id]");
+      var navLinks = document.querySelectorAll("#sidemenu li a");
+
+      window.addEventListener("scroll", function () {
+        var current = "";
+        sections.forEach(function (section) {
+          if (window.scrollY >= section.offsetTop - 120) {
+            current = section.getAttribute("id");
+          }
+        });
+        navLinks.forEach(function (link) {
+          link.classList.remove("active-nav");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active-nav");
+          }
+        });
+      });
     </script>
   </body>
 </html>
