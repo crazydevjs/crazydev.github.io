@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a2e"/>
+      <stop offset="100%" style="stop-color:#2d1b4e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37"/>
+      <stop offset="100%" style="stop-color:#f0d060"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g opacity="0.08" stroke="#d4af37" stroke-width="1">
+    <line x1="0" y1="50" x2="600" y2="50"/>
+    <line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="150" x2="600" y2="150"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="250" x2="600" y2="250"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="0" y1="350" x2="600" y2="350"/>
+    <line x1="75" y1="0" x2="75" y2="400"/>
+    <line x1="150" y1="0" x2="150" y2="400"/>
+    <line x1="225" y1="0" x2="225" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="375" y1="0" x2="375" y2="400"/>
+    <line x1="450" y1="0" x2="450" y2="400"/>
+    <line x1="525" y1="0" x2="525" y2="400"/>
+  </g>
+
+  <!-- Face silhouette -->
+  <ellipse cx="300" cy="175" rx="62" ry="75" fill="#2a1540" stroke="#d4af37" stroke-width="1.5" opacity="0.9"/>
+  <!-- Eyes -->
+  <ellipse cx="278" cy="160" rx="9" ry="6" fill="#d4af37" opacity="0.8"/>
+  <ellipse cx="322" cy="160" rx="9" ry="6" fill="#d4af37" opacity="0.8"/>
+  <!-- Nose -->
+  <path d="M300 168 L294 185 L306 185" fill="none" stroke="#d4af37" stroke-width="1.5" opacity="0.6"/>
+  <!-- Smile -->
+  <path d="M285 196 Q300 208 315 196" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.7"/>
+  <!-- Neck -->
+  <rect x="288" y="248" width="24" height="22" rx="4" fill="#2a1540" stroke="#d4af37" stroke-width="1" opacity="0.7"/>
+  <!-- Shoulders -->
+  <path d="M210 290 Q255 268 300 270 Q345 268 390 290 L390 310 L210 310 Z" fill="#2a1540" stroke="#d4af37" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Face detection box — main -->
+  <rect x="218" y="88" width="164" height="192" rx="4"
+        fill="none" stroke="#d4af37" stroke-width="2" filter="url(#glow)" opacity="0.9"/>
+  <!-- Corner brackets -->
+  <path d="M218 108 L218 88 L238 88" fill="none" stroke="#f0d060" stroke-width="3" stroke-linecap="round"/>
+  <path d="M362 88 L382 88 L382 108" fill="none" stroke="#f0d060" stroke-width="3" stroke-linecap="round"/>
+  <path d="M218 260 L218 280 L238 280" fill="none" stroke="#f0d060" stroke-width="3" stroke-linecap="round"/>
+  <path d="M362 280 L382 280 L382 260" fill="none" stroke="#f0d060" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Scan line -->
+  <line x1="218" y1="184" x2="382" y2="184" stroke="#d4af37" stroke-width="1.5" opacity="0.5" stroke-dasharray="4 3"/>
+
+  <!-- Dot landmarks on face -->
+  <circle cx="278" cy="160" r="3" fill="#f0d060" filter="url(#glow)"/>
+  <circle cx="322" cy="160" r="3" fill="#f0d060" filter="url(#glow)"/>
+  <circle cx="300" cy="196" r="3" fill="#f0d060" filter="url(#glow)"/>
+  <circle cx="258" cy="175" r="2" fill="#d4af37" opacity="0.7"/>
+  <circle cx="342" cy="175" r="2" fill="#d4af37" opacity="0.7"/>
+  <circle cx="285" cy="145" r="2" fill="#d4af37" opacity="0.6"/>
+  <circle cx="315" cy="145" r="2" fill="#d4af37" opacity="0.6"/>
+
+  <!-- Small face detection boxes (right side) -->
+  <rect x="440" y="110" width="80" height="95" rx="3" fill="none" stroke="#d4af37" stroke-width="1.5" opacity="0.5"/>
+  <path d="M440 122 L440 110 L452 110" fill="none" stroke="#f0d060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M508 110 L520 110 L520 122" fill="none" stroke="#f0d060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M440 193 L440 205 L452 205" fill="none" stroke="#f0d060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M508 205 L520 205 L520 193" fill="none" stroke="#f0d060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <!-- Small face inside -->
+  <ellipse cx="480" cy="148" rx="22" ry="27" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.4"/>
+  <circle cx="472" cy="142" r="3" fill="#d4af37" opacity="0.4"/>
+  <circle cx="488" cy="142" r="3" fill="#d4af37" opacity="0.4"/>
+
+  <!-- Small face detection box (left side) -->
+  <rect x="78" y="120" width="80" height="95" rx="3" fill="none" stroke="#d4af37" stroke-width="1.5" opacity="0.5"/>
+  <path d="M78 132 L78 120 L90 120" fill="none" stroke="#f0d060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M146 120 L158 120 L158 132" fill="none" stroke="#f0d060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M78 203 L78 215 L90 215" fill="none" stroke="#f0d060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M146 215 L158 215 L158 203" fill="none" stroke="#f0d060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <ellipse cx="118" cy="158" rx="22" ry="27" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.4"/>
+  <circle cx="110" cy="152" r="3" fill="#d4af37" opacity="0.4"/>
+  <circle cx="126" cy="152" r="3" fill="#d4af37" opacity="0.4"/>
+
+  <!-- MATCHED badge -->
+  <rect x="230" y="290" width="140" height="26" rx="13" fill="#d4af37" opacity="0.15"/>
+  <rect x="230" y="290" width="140" height="26" rx="13" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.6"/>
+  <circle cx="248" cy="303" r="5" fill="#4caf50" opacity="0.9"/>
+  <text x="260" y="308" font-family="monospace" font-size="11" fill="#d4af37" opacity="0.9">FACE MATCHED</text>
+
+  <!-- Rings icon (wedding theme) -->
+  <circle cx="90" cy="330" r="14" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.8"/>
+  <circle cx="108" cy="330" r="14" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.8"/>
+  <circle cx="90" cy="330" r="4" fill="#d4af37" opacity="0.5"/>
+  <circle cx="108" cy="330" r="4" fill="#d4af37" opacity="0.5"/>
+
+  <!-- Title text -->
+  <text x="300" y="355" text-anchor="middle" font-family="Poppins, sans-serif" font-size="18" font-weight="600" fill="#d4af37" filter="url(#glow)">Wedding Face Finder</text>
+  <text x="300" y="375" text-anchor="middle" font-family="monospace" font-size="10" fill="#d4af37" opacity="0.5">AI · Face Recognition · Event Photos</text>
+</svg>
