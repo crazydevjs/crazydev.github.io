@@ -615,6 +615,18 @@ body {
 .work:hover .layer a { transform: translateY(0); }
 .layer a:hover { background: var(--accent-dark); }
 
+/* Touch devices — layer always visible since hover doesn't exist */
+@media (hover: none) {
+  .layer {
+    opacity: 1;
+  }
+  .layer h3,
+  .layer p,
+  .layer a {
+    transform: translateY(0);
+  }
+}
+
 .btn {
   display: block;
   margin: 48px auto 0;
